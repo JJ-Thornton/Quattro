@@ -1,0 +1,94 @@
+/*universal page formatting*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 10%);
+}
+
+#logo-1 {
+  display: flex;
+  position: absolute;
+  left: 7em;
+  top: 9em;
+}
+
+.mainHeading {
+  color: hsl(0, 0%, 100%);
+  float: left;
+  display: flex;
+  position: relative;
+  top: 0.3em;
+  left: 1em;
+}
+
+/*Nav Bar links and placement */
+
+header {
+  width: 95%;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+nav {
+  float: right;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  float: right;
+  display: flex;
+  position: relative;
+  top: 1.6em;
+  left: 18em;
+  transform: translate(-50%, -50%);
+  font-size: 1.1em;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 1.5em;
+}
+
+ul li a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: hsl(0, 0%, 100%);
+  transition: 400ms;
+  text-decoration: none;
+}
+
+ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 400ms;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+/*Navbar continued, Hover effects*/
+
+a:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 90%);
+}
+
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 0.9em hsl(0, 0%, 100%);
+}
+
+ul li a:hover {
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 1px hsl(0, 0%, 10%);
+  text-shadow: 0 0 10px hsl(0, 0%, 100%);
+}

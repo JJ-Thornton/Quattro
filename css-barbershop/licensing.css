@@ -1,0 +1,14 @@
+/* Picture align */
+.cert {
+  width: 45em;
+  border: 5px solid hsl(138, 93%, 58%);
+  padding: 2.5em;
+  margin: 2.5em auto;
+}
+
+.license {
+  width: 60em;
+  border: 5px solid hsl(298, 96%, 47%);
+  padding: 2.5em;
+  margin: 2.5em auto;
+}

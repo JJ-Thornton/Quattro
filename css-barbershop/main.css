@@ -1,0 +1,134 @@
+/*universal page formatting*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'seagram_tfbregular';
+  src: url('fonts/seagram_tfb-webfont.woff2') format('woff2'),
+    url('fonts/seagram_tfb-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: hsl(0, 0%, 15%);
+  font-family: 'seagram_tfbregular';
+  color: hsl(0, 0%, 100%);
+}
+
+#logo-1 {
+  display: flex;
+  position: absolute;
+  height: 15em;
+  width: 15em;
+  left: 5em;
+  top: 10em;
+}
+
+.mainHeading {
+  color: hsl(0, 0%, 100%);
+  float: left;
+  display: flex;
+  position: relative;
+  top: 0.7em;
+  left: 1.7em;
+}
+
+/*Nav Bar links and placement */
+
+header {
+  width: 100%;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+nav {
+  float: right;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  float: right;
+  display: flex;
+  position: relative;
+  top: 3.3em;
+  left: 20em;
+  transform: translate(-50%, -50%);
+  font-size: 0.8em;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 1.5em;
+  border-radius: 5%;
+}
+
+ul li a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: hsl(0, 0%, 100%);
+  transition: 400ms;
+  text-decoration: none;
+}
+
+ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 400ms;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+/*Navbar continued, Hover effects*/
+
+a:hover {
+  cursor: pointer;
+  color: hsl(298, 96%, 47%);
+}
+
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 1em hsl(298, 96%, 47%);
+}
+
+ul li a:hover {
+  color: hsl(298, 96%, 47%);
+  box-shadow: 0 0 0.125em hsl(298, 96%, 47%);
+  text-shadow: 0 0 2em hsl(298, 96%, 47%);
+}
+
+/*header background*/
+
+.refine {
+  height: 6em;
+  width: 100%;
+  top: 3.5em;
+  background: hsla(0, 0%, 35%, 0.664);
+}
+@media (max-width: 1500px) {
+  .refine {
+    border-radius: 10px;
+  }
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  color: hsl(0, 0%, 15%);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 100vw;
+  width: 8px;
+  background-color: hsl(298, 96%, 47%);
+}
